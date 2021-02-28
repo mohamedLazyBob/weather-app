@@ -1,5 +1,61 @@
 :root {
-    margin: 0;
-    padding: 0;
-    font-family: ;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+	--color-01: #062845;
+	--color-02: #FF8726;
+	--color-03: #FFCA3E;
+	--color-04: #42BBFF;
+	--color-05: #FFFFFF;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background: #222;
+}
+.card {
+	border: 1px solid black;
+	background: #eaeaead8;
+	padding: 2em;
+	margin: 2em;
+	border-radius: 30px;
+	width: 100%;
+	max-width: 420px;
+}
+
+.search-container { 
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.search-container > input {
+	box-sizing: border-box;
+	margin: 0.5em;
+	padding: 0.5em 1em;
+	height: 48px;
+	width: calc(100% - 48px - 2em);
+
+	border-radius: 24px;
+	border: none;
+	outline: none;
+
+	color: #222;
+	background: rgba(34, 34, 34, 0.2);
+}
+button {
+	margin: 0.5em;
+	height: 48px;
+	width: 48px;
+
+	border: none;
+	border-radius: 50%;
+	outline: none;
+
+	background: rgba(34, 34, 34, 0.2);
+
 }
