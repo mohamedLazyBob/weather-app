@@ -1,61 +1,166 @@
+@font-face {
+	font-family: objectivity;
+	src: url(./Objectivity-Light/Objectivity-Regular.otf);
+}
+
 :root {
+	--color-01: #161616;
+	--color-02: #ff8726;
+}
+
+html {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Open Sans', sans-serif;
-	--color-01: #062845;
-	--color-02: #FF8726;
-	--color-03: #FFCA3E;
-	--color-04: #42BBFF;
-	--color-05: #FFFFFF;
+	font-family: objectivity;
+}
+
+html * {
+	box-sizing: border-box;
 }
 
 body {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
-	background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--color-01);
 }
+
+/* ************************************************** */
 .card {
-	border: 1px solid black;
-	background: #eaeaead8;
-	padding: 2em;
-	margin: 2em;
-	border-radius: 30px;
-	width: 100%;
-	max-width: 420px;
+  /* box-sizing: content-box; */
+  /* background: var(--color-02); */
+  /* border-radius: 30px; */
+  background: linear-gradient(45.24deg, #040404 6.42%, #171616 52.08%, #282627 89.18%);
+  border: 1px solid #363636;
+  box-sizing: border-box;
+  border-radius: 12px;
+
+  width: 360px;
+  height: 416px;
+  padding: 0px;
+
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.search-container { 
+/* ************************************************** */
+/* *********************** upper-div *************************** */
+.upper-nav {
+  /* background-color: var(--color-02); */
+  height: 27px;
+  margin: 27px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.location {
+
+  margin: 0px;
+  width: 80px;
+  font-style: normal;
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 14px;
+  color: white;
+
+  letter-spacing: 0.015em;
+  text-align: center;
+
+  cursor: pointer;
+}
+
+/* the date */
+.date {
+  /* border: 1px solid black; */
+  font-size: 16px;
+  line-height: 19px;
+  color: white;
+}
+
+/* ********************* middle-div ***************************** */
+.middle-div {
+  /* border: 1px solid red; */
+  /* height: 50px; */
+}
+
+/* ********************* bottom-div ***************************** */
+.bottom-div {
+  margin: 27px;
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+
+  /* border: 1px dotted black; */
+}
+
+/* ************************************************** */
+.info-container {
+  /* box-sizing: border-box; */
+  margin: 0pc;
+
+  /* border: 1px solid red; */
+  width: 50%;
+  display: in;
+}
+
+/* ************************************************** */
+.wind, .humidity, .sun-houres {
+  margin: 10px 0;
+  height: 30px;
 	display: flex;
-	align-items: center;
-	justify-content: center;
+  align-items: center;
+  /* border: 1px dotted red; */
+  /* text-align: center; */
 }
 
-.search-container > input {
-	box-sizing: border-box;
-	margin: 0.5em;
-	padding: 0.5em 1em;
-	height: 48px;
-	width: calc(100% - 48px - 2em);
-
-	border-radius: 24px;
-	border: none;
-	outline: none;
-
-	color: #222;
-	background: rgba(34, 34, 34, 0.2);
+.icon {
+  /* padding-top: 10px; */
+  width: 19px;
+  margin-right: 10px;
+  /* border: 1px solid red; */
+  filter: invert(100%) sepia(0%) saturate(7426%) hue-rotate(357deg) brightness(120%) contrast(119%);
 }
-button {
-	margin: 0.5em;
-	height: 48px;
-	width: 48px;
 
-	border: none;
-	border-radius: 50%;
-	outline: none;
+.wind span, .humidity span, .sun-houres span {
+  display: inline-block;
+  width: calc(100% - 19px);
+  font-size: 16px;
+  line-height: 19px;
+  /* padding-bottom: 2px; */
+  /* text-align: justify; */
+  /* border: 1px solid; */
+}
 
-	background: rgba(34, 34, 34, 0.2);
+/* ************************************************** */
 
+.temp-div {
+  /* border: 1px solid red; */
+  /* box-sizing: border-box; */
+
+  margin: 0;
+  width: 50%;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.temp-div span {
+  font-family: objectivity;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 80px;
+  /* line-height: 82px; */
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.05em;
 }

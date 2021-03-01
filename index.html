@@ -1,34 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Weather App</title>
-</head>
-<body>
-    <div class='card'>
-        <div class="search-container">
-            <input type="text" name="" id="">
-            <button type="submit">
-                <!--  TODO: insert search icon here -->
-               S
-            </button>
+  </head>
+  <body>
+    <div class="card upper-div">
+      <div class="upper-nav">
+        <p class="location">--</p>
+        <span class="date">--:--</span>
+      </div>
+
+      <div class="widget middle-div">
+        <!-- TODO - include a widget here -->
+      </div>
+
+      <div class="bottom-div">
+        <div class="info-container">
+
+          <div class="wind">
+            <img src="icons/wind.svg" alt="icon" class="icon"/>
+            <span>-- Km/h</span>
+          </div>
+
+          <div class="humidity">
+            <img src="icons/drop.svg" alt="icon" class="icon" />
+            <span>-- %</span>
+          </div>
+
+          <div class="sun-houres">
+            <img src="icons/sun.svg" alt="icon"  class="icon" />
+            <span>-.-h</span>
+          </div>
         </div>
-        <h2>Weather in Agadir</h2>
-        <p>27 °C</p>
-        <p>Cloudy</p>
-        <div class="Humidity-container">
-            <span>Humidity: </span>
-            <span id="id_humidity">60%</span>
+
+        <div class="temp-div">
+          <span>--°</span>
         </div>
-        <div class="wind-container">
-            <span>Wind Speed: </span>
-            <span class="id_wind_speed">3.2 Km/h</span>
-        </div>
+      </div>
     </div>
-</body>
+    <script src="./scripts.js"></script>
+  </body>
 </html>
