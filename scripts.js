@@ -1,4 +1,4 @@
-'strict mode'
+"strict mode";
 
 const api_key = "7747d6dbc5a1be9f1b358ed744106784";
 
@@ -13,7 +13,6 @@ let tempDom = document.querySelector(".temp-div span");
 window.addEventListener("load", () => {
   let longitude_x;
   let latitude_y;
-
 
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition((pos) => {
@@ -40,7 +39,7 @@ window.addEventListener("load", () => {
 });
 
 function updateDom(data) {
-    console.log(data);
+  console.log(data);
   let { temp, humidity } = data.main;
 
   locationDom.textContent = data.name;
@@ -53,9 +52,17 @@ function updateDom(data) {
   let suntime = (Number(data.sys.sunset) - Number(data.sys.sunrise)) / 3600;
   sunDom.textContent = `${suntime.toFixed(1)} h`;
 
+//   log("-- debug --")
+  let iconCode = data.weather[0].icon;
+  let desc = data.weather[0].description;
+//   log(iconCode + ' ' + desc);
+  let widLink = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
 
-  let description = data.weather[0].description;
-  log(description);
-  let desc = document.querySelector('.widget');
-  desc.textContent = `" ${description} "`;
+
+  let widget = document.querySelector('.widget');
+  widget.innerHTML = `
+        <img src="${widLink}" alt="weather icon">
+		<p>${desc}</p>
+	`
+
 }
