@@ -154,6 +154,7 @@ body {
   width: 50%;
 
   display: flex;
+  flex-direction: column;
   align-items: flex-end;
   justify-content: flex-end;
 }
@@ -170,4 +171,12 @@ body {
   align-items: center;
   text-align: center;
   letter-spacing: -0.05em;
+}
+
+.feels-like {
+  /* display: inline-block; */
+  /* width: calc(100% - 19px); */
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 19px;
 }

@@ -9,6 +9,7 @@ let windDom = document.querySelector(".wind span");
 let humidityDom = document.querySelector(".humidity span");
 let sunDom = document.querySelector(".sun-houres span");
 let tempDom = document.querySelector(".temp-div span");
+let feelsLikeDom = document.querySelector(".feels-like")
 
 window.addEventListener("load", () => {
   let longitude_x;
@@ -40,12 +41,15 @@ window.addEventListener("load", () => {
 
 function updateDom(data) {
   console.log(data);
-  let { temp, humidity } = data.main;
+  let { temp, humidity, feels_like } = data.main;
 
   locationDom.textContent = data.name;
   tempDom.textContent = `${temp.toFixed(0)}°`;
+  feelsLikeDom.textContent = `Feels like: ${feels_like.toFixed(1)}°`
+
   let temp1 = new Date();
-  timeDom.textContent = `${temp1.getHours()}:${temp1.getMinutes()}`;
+  timeDom.textContent = `${temp1.getHours().toString().padStart(2, '0')}:${temp1.getMinutes().toString().padStart(2, '0')}`;
+
   windDom.textContent = data.wind.speed.toFixed(1) + " Km/h";
   humidityDom.textContent = humidity + " %";
 
