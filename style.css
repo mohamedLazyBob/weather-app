@@ -84,9 +84,16 @@ body {
 }
 
 /* ********************* middle-div ***************************** */
-.middle-div {
-  /* border: 1px solid red; */
-  /* height: 50px; */
+.widget {
+  font-style: normal;
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 14px;
+  color: white;
+
+  letter-spacing: 0.015em;
+  text-align: center;
 }
 
 /* ********************* bottom-div ***************************** */

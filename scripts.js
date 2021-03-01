@@ -40,7 +40,7 @@ window.addEventListener("load", () => {
 });
 
 function updateDom(data) {
-  //   console.log(data);
+    console.log(data);
   let { temp, humidity } = data.main;
 
   locationDom.textContent = data.name;
@@ -52,4 +52,10 @@ function updateDom(data) {
 
   let suntime = (Number(data.sys.sunset) - Number(data.sys.sunrise)) / 3600;
   sunDom.textContent = `${suntime.toFixed(1)} h`;
+
+
+  let description = data.weather[0].description;
+  log(description);
+  let desc = document.querySelector('.widget');
+  desc.textContent = `" ${description} "`;
 }
